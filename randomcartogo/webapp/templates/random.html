@@ -1,0 +1,14 @@
+{% extends 'main_page.html' %}
+
+{% block content %}
+<div class="random-content">{{result}}</div>
+<div class="button-wrapper">
+    <a class="random-button" href="{% url 'random' %}">
+        {% if firstRandom %}
+        <div>Go!</div>
+        {% else %}
+        <div>Random again</div>
+        {% endif %}
+    </a>                
+</div>
+{% endblock %}

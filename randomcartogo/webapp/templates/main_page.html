@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<html>
+    <head>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <div class="add-button-wrapper">
+            {% if user.is_authenticated %}
+                {% if isShowingInput %}
+                    <a href="{% url 'mainpage' %}"><span class="glyphicon glyphicon-remove"></span></a>
+                {% else %}
+                    <a href="{% url 'add' %}"><span class="glyphicon glyphicon-plus"></span></a>
+                {% endif %}
+            {% else %}
+                {% if isShowingInput %}
+                    <a href="{% url 'mainpage' %}"><span class="glyphicon glyphicon-remove"></span></a>                    
+                {% else %}
+                    <a href="{% url 'listpage' %}"><span class="glyphicon glyphicon-list"></span></a>                
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="content-wrapper">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

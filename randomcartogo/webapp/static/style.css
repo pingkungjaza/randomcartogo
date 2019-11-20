@@ -1,0 +1,173 @@
+
+@font-face {
+    font-family: mainFont;
+    src: url(MechanicalExt.otf);
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background: #ffa52f;
+    color: white;
+    position: relative;
+}
+
+.add-button-wrapper {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    font-size: 6em;
+}
+
+.add-button-wrapper a {
+    cursor: pointer;
+    color: #FFF;
+}
+
+.content-wrapper {
+    width: fit-content;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 30vh;
+    font-family: mainFont;
+}
+
+.content-wrapper input {
+    background: transparent;
+    border: 0;
+    border-bottom: #FFF 2px solid;
+    line-height: 2em;
+    font-size: 4em;
+    text-align: center;
+    width: 100%;
+}
+
+.random-content {
+    font-size: 10em;
+    text-align: center;
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wrapper .action-button, .random-button {
+    background: transparent;
+    border: #FFF 2px solid;
+    border-radius: 5px;
+    font-size: 2em; 
+    padding: 20px 0 20px 0;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.button-wrapper .action-button:hover, .random-button:hover {
+    background: #FFF;
+    border: #ffa52f 2px solid;
+    color: #ffa52f;
+    text-decoration: none;
+}
+
+.button-wrapper .action-button:hover, .random-button:active {
+    background: #FFF;
+    border: #6bcae2 2px solid;
+    color: #6bcae2;
+    text-decoration: none;
+}
+
+.random-button {
+    width: 30vw;
+}
+
+.action-button {
+    width: 25vw;
+    margin-top: 50px;
+}
+
+.action-button:first-child {
+    margin-right: 10px;
+}
+
+.add-form label {
+    display: none;
+}
+
+.list-wrapper {
+    width: 50vw;
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+.list-wrapper .list {
+    width: 100%;
+}
+
+.list-wrapper .list .list-item {
+    padding: 20px 0 20px 0;
+    border-top: #FFF 1.5px solid;
+    font-size: 3em;
+}
+
+.list-wrapper .list .list-item:last-child {
+    border-bottom: #FFF 1.5px solid;
+}
+
+.list-wrapper .list .list-item .item-wrapper {
+    position: relative;
+}
+
+.list-wrapper .list .list-item .item-wrapper .text {
+    margin-left: 10px;
+}
+
+.list-wrapper .list .list-item .item-wrapper .list-item-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.list-wrapper .list .list-item .item-wrapper .list-item-button a {
+    padding: 0 10 0 10;
+    color: #FFF;
+    font-size: 0.8em;
+}
+
+.back-button .back-button-text {
+    width: 24vw;
+    background: transparent;
+    border: #FFF 2px solid;
+    border-radius: 5px;
+    font-size: 2em; 
+    padding: 20px 0 20px 0;
+    cursor: pointer;
+    text-align: center;
+    color: #FFF;
+    margin: auto;
+    margin-top: 30px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    text-decoration: none;
+}
+
+.back-button:hover .back-button-text {
+    background: #FFF;
+    border: #ffa52f 2px solid;
+    color: #ffa52f; 
+}
